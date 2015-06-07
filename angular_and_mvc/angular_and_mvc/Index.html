@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Wine List</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/myApp.js"></script>
+</head>
+<body>
+
+    <h1>Current Wine List</h1>
+    <br/>
+    <div ng-controller="HomeController">
+       
+        <label for="name">Name</label>
+        <input type="text" name="wName" value="name" ng-model="wName" /><br />
+        <label for="country">Country</label>
+        <input type="text" name="wCountry" value="country" ng-model="wCountry" /><br />
+        <label for="type">Type</label>
+        <input type="text" name="wType" value="type" ng-model="wType" /><br />
+        <label for="year">Year</label>
+        <input type="text" name="wYear" value="year" ng-model="wYear" /><br />
+        <label for="Color">Color</label>
+        <input type="text" name="wColor" value="Color" ng-model="wColor" /><br />
+
+        <button ng-show="!editMode" ng-click="getUserDetails()">Add</button>
+        <button ng-show="editMode" ng-click="saveUserDetails()">Save Changes</button>
+        <hr />
+
+        <table class="table table-bordered table-striped">
+            <tr><th>INDEX</th><th>Name</th><th>Country</th><th>type</th><th>Year</th><th>Color</th></tr>
+
+        <tr ng-repeat="c in myContacts">
+            <td>{{$index}}</td><td>{{c.wName}}</td><td>{{c.wCountry}}</td><td>{{c.wType}}</td><td>{{c.wYear}}</td><td>{{c.wColor}}</td><td><button class="btn" ng-click="userEdit($index)">EDIT</button> <button ng-click="userDelete($index)">DELETE</button></td>
+
+            </tr>
+        
+        </table>
+
+    </div>
+    
+
+</body>
+</html>
