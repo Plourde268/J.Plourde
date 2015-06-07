@@ -1,0 +1,12 @@
+﻿.proPic{
+    height:245px;
+    width:245px;
+}
+.comPic{
+    height:30px;
+    width:30px;
+}
+body{
+    background-image: url("https://secure.static.tumblr.com/e1f1e7747cd462ccb5c7753f3242d78b/x6tll2l/n2Pn1iedv/tumblr_static_space-lols-space-34881513-1920-1200.jpg");
+    background-color: #cccccc;
+}

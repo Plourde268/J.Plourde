@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>chipper App</title>
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-4 column">
+
+                <div id="profile"></div>
+
+            </div>
+            <div class="col-md-4 column">
+                <div class="tabbable" id="tabs-385942">
+                    <div class="jumbotron">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#panel-715199" data-toggle="tab">Feed</a>
+                            </li>
+                            <li>
+                                <a href="#panel-66663" data-toggle="tab">Friends</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="form-horizontal" role="form">
+                        <h4></h4>
+                        <div class="form-group" style="padding:14px;">
+                            <textarea id="todotext" class="form-control" placeholder="Update your status"></textarea>
+                            <br />
+                            <button onclick="myTodo.doaddtodo()" class="btn btn-primary pull-right" type="button">Send!</button><ul class="list-inline">
+                                <li>
+                                    <button id="savetodo" onclick="myTodo.dosavetodo()" class="btn btn-primary">Save Changes</button>
+
+                        </div>
+
+                    </form>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="panel-715199">
+                            <div id="ToDoList"></div>
+                        </div>
+                        <div class="tab-pane" id="panel-66663">
+                            
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Tristoff
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                            <img class="proPic" src="https://scontent-dfw.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/11069427_1431979123766116_5534384110176097758_n.jpg?oh=43e6f6de8dba69d1469b40c0f9a81f9d&oe=55AD2908" />
+                                            <br />
+                                            About:
+                                            <br />
+                                            City: Houston
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Keigo
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                        <div class="panel-body">
+
+                                            <img class="proPic" src="https://codercamps.blob.core.windows.net/avatars/keigito.jpg" />
+                                            <br/>
+                                            About:
+                                            <br />
+                                            City: Houston
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 column">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/moment.js"></script>
+    <script src="Script.js"></script>
+    <script src="Script - Copy.js"></script>
+</body>
+
+</html>
