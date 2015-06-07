@@ -1,0 +1,64 @@
+﻿@model mvc_superChores.Models.ChoresVm
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Chore List</h1>
+    <p class="lead">Do your chores or rick james will burn your couch</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Bathroom</h2>
+        <table class="table-bordered table-responsive table-striped">
+            <thead>
+            <tr>
+                <th>Task</th>
+                <th>Person</th>
+                <th>IsCompleted</th>
+            </tr>
+                </thead>
+            <tbody>
+             @foreach (var k in Model.BathroomChores)
+                {
+                 <tr>
+                    <td>@k.Task @k.Type</td>
+                    <td>@k.Person</td>
+                    <td>@k.IsCompleted</td>
+                 </tr>
+                }
+            </tbody>
+               </table>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    
+    <div class="col-md-4">
+        <h2>Kitchen</h2>
+        <table class="table-bordered table-responsive table-striped">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Person</th>
+                    <th>IsCompleted</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var k in Model.KitchenChores)
+                {
+                    <tr>
+                        <td>@k.Task</td>
+                        <td>@k.Person</td>
+                        <td>@k.IsCompleted</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>

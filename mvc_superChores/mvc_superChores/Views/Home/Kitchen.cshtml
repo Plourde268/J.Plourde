@@ -1,0 +1,30 @@
+﻿@model mvc_superChores.Models.ChoresVm
+@{
+    
+}
+<br /><br />
+<div>
+<h2>Kitchen Chores</h2>
+<hr />
+<br />
+<table class=" table-bordered table-striped table-responsive">
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Person</th>
+            <th>Completed</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var k in Model.KitchenChores)
+        {
+            <tr>
+                <td>@k.Task</td>
+                <td>@k.Person</td>
+                <td>@k.IsCompleted</td>
+                <td>@Html.ActionLink("Kitchen Detail", "KitchenDetails", "Home", new { id = k.id}, null)</td>
+            </tr>
+        }
+    </tbody>
+</table> 
+</div>

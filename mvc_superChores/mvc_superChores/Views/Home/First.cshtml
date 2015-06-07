@@ -1,0 +1,14 @@
+﻿@model mvc_superChores.Models.ChoresVm
+@{
+               
+}
+
+<div>
+    <h2>First Kitchen Chore</h2>
+    <p>Task: @Model.KitChore.Task, Person: @Model.KitChore.Person, @Html.ActionLink("Detail", "KitchenDetails", "Home", new { id = Model.KitChore.id }, null)</p>
+</div>
+
+<div>
+    <h2>First Bathroom Chore</h2>
+    <p>Task: @Model.BatChore.Task @Model.BatChore.Type, Person: @Model.BatChore.Person, @Html.ActionLink("Detail", "BathroomDetails", "Home", new { id = Model.BatChore.id }, null)</p>
+</div>
