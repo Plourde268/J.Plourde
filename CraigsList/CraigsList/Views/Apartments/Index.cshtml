@@ -1,0 +1,47 @@
+﻿@model CraigsList.Models.AdsVm
+
+@{
+    
+}
+
+
+<div class="col-md-12">
+    <h2>Apartments</h2>
+    <table class="table-responsive table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Created By</th>
+                <th>Created On</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Availibility</th>
+                <th>Price</th>
+                <th>BedsBaths</th>
+                <th>SquareFootage</th>
+                <th>Animals</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var k in Model.AptAds)
+            {
+                <tr>
+                    <td>@k.Id</td>
+                    <td>@k.Title</td>
+                    <td>@k.CreatedBy</td>
+                    <td>@k.CreatedOn</td>
+                    <td>@k.City</td>
+                    <td>@k.State</td>
+                    <td>@k.IsAvailible</td>
+                    <td>$@k.Price</td>
+                    <td>@k.BedsBaths</td>
+                    <td>@k.SquareFootage</td>
+                    <td>@k.Animals</td>
+                    <td>@Html.ActionLink("Details", "Details", "Apartments", new { Id = k.Id }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,49 @@
+﻿@model CraigsList.Models.AdsVm
+
+@{
+    
+}
+
+
+<div class="col-md-12">
+    <h2>Automobiles</h2>
+    <table class="table-responsive table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Created By</th>
+                <th>Created On</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Availibility</th>
+                <th>Price</th>
+                <th>Milage</th>
+                <th>Make</th>
+                <th>Year</th>
+                <th>Color</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var k in Model.AutoAds)
+            {
+                <tr>
+                    <td>@k.Id</td>
+                    <td>@k.Title</td>
+                    <td>@k.CreatedBy</td>
+                    <td>@k.CreatedOn</td>
+                    <td>@k.City</td>
+                    <td>@k.State</td>
+                    <td>@k.IsAvailible</td>
+                    <td>$@k.Price</td>
+                    <td>@k.Milage</td>
+                    <td>@k.Make</td>
+                    <td>@k.Year</td>
+                    <td>@k.Color</td>
+                    <td>@Html.ActionLink("Details", "Details", "Automobiles", new {Id = k.Id }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

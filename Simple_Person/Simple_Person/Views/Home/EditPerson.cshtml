@@ -1,0 +1,33 @@
+﻿@model Simple_Person.Models.UpdateVm
+
+@{
+    ViewBag.Title = "GetDetails";
+}
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.Update.PersonId)
+
+    <div>
+        @Html.LabelFor(model => model.Update.FirstName)
+    </div>
+    <div>
+        @Html.TextBoxFor(model => model.Update.FirstName)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Update.LastName)
+    </div>
+    <div>
+        @Html.TextBoxFor(model => model.Update.LastName)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Update.Birthdate)
+    </div>
+    <div>
+        @Html.TextBoxFor(model => model.Update.Birthdate)
+    </div>
+    <br />
+    <div>
+        <button type="submit">Save</button>
+    </div>
+
+}
