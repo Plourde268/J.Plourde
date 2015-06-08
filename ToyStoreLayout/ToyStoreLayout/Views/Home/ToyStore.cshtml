@@ -1,0 +1,24 @@
+﻿
+@{
+    
+    Layout = "~/Views/Shared/_ToyStoreLayoutPage1.cshtml";
+}
+
+
+@section featured
+{
+<h3>My Featured Toys</h3>
+<ul>
+    <li>Race car</li>
+    <li>Giraffe</li>
+    <li>Alligator</li>
+</ul>
+}
+
+<h2>ToyStore</h2>
+
+@Html.Action("GetAd", "BannerAd")
+
+@Html.Partial("_FeaturedProduct")
+
+<div>This my Store</div>

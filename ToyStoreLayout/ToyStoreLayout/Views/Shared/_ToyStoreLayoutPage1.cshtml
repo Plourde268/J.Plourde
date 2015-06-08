@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <section><img src="http://www.w3schools.com/html/pic_mountain.jpg" /></section>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-8 column">
+                    @RenderBody()
+            </div>
+            <div class="col-md-4 column">
+                @RenderSection("Featured")
+            </div>
+        </div>
+        </div>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My Toy store</p>
+        </footer>
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
