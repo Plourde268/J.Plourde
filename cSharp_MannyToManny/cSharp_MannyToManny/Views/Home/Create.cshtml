@@ -1,0 +1,26 @@
+﻿@model cSharp_MannyToManny.Models.ActorsCreateVm
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(model=>model.FirstName)
+        <br />
+        @Html.TextBoxFor(model => model.FirstName)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.LastName)
+        <br />
+        @Html.TextBoxFor(model => model.LastName)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.City)
+        <br />
+        @Html.TextBoxFor(model => model.City)
+    </div>
+
+    <input type="submit" value="Add Actor" />
+}
+
