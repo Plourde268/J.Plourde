@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+<h2>@ViewBag.Title.</h2>
+
+@section scripts{
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-8 column">
+            <form name="htmlform" method="post">
+                <table width="450px">
+                    
+                    <tr>
+                        <td valign="top">
+                            <label for="FirstName">First Name *</label>
+                        </td>
+                        <td valign="top">
+                            <input type="text" name="FirstName" maxlength="50" size="30" data-val="true" data-val-required="*">
+                            <span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td valign="top">
+                            <label for=" LastName">Last Name *</label>
+                        </td>
+                        <td valign="top">
+                            <input type="text" name="LastName" maxlength="50" size="30" data-val="true" data-val-required="*">
+                            <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="Email">Email Address *</label>
+                        </td>
+                        <td valign="top">
+                            <input type="text" name="Email" maxlength="80" size="30" data-val="true" data-val-required="*" data-val-email="Not Valid">
+                            <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="Comments">Comments *</label>
+                        </td>
+                        <td valign="top">
+                            <textarea name="Comments" maxlength="1000" cols="25" rows="6" data-val="true" data-val-required="*"></textarea>
+                            <span class="field-validation-valid" data-valmsg-for="Comments" data-valmsg-replace="true"></span>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:center">
+                            <input type="submit" value="Submit">
+                            @if (ViewBag.MailSent != null && ViewBag.MailSent)
+                            {
+                                <div>Mail Sent!</div>
+                            }
+                        </td>
+
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+        <div class="col-md-4 column">
+            <address>
+                One Microsoft Way<br />
+                Redmond, WA 98052-6399<br />
+                <abbr title="Phone">P:</abbr>
+                425.555.0100
+            </address>
+
+        </div>
+    </div>
+</div>
+
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>

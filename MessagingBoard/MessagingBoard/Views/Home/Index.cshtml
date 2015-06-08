@@ -1,0 +1,111 @@
+﻿@model IEnumerable<MessagingBoard.Data.Topic>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Message Board</h1>
+    <p class="lead">Say Whats on Your Mind!</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="message-header">
+    <p class="lead">Latest Messages...</p>
+</div>
+
+@*my original zen code: .messages>(.message.row>(.title.span10>lorem5)+(.date.span2>{Feb 12, 2015})+(.contents.span12>lorem)+(.toolbar.span12>button.btn.btn-primary.reply-button>{Reply})+.Replys.span12)*5*@
+@*(.reply>(.created.pull-right>{Feb 28, 2013})+.content>lorem)*3*@
+
+<div class="messages">
+    <div class="message row">
+        <div class="title span10">Consectetur adipiscing elit fusce vel.</div>
+        <div class="date span2">Feb 12, 2015</div>
+        <div class="contents span12">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+        <div class="toolbar span12"><button class="btn btn-primary reply-button">Reply</button></div>
+        <div class="Replys span12">
+            <div class="reply">
+                <div class="created pull-right">Feb 28, 2013</div>
+                <div class="content">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+            </div>
+            <div class="reply">
+                <div class="created pull-right">Feb 28, 2013</div>
+                <div class="content">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+            </div>
+        </div>
+    </div>
+    <div class="message row">
+        <div class="title span10">Consectetur adipiscing elit fusce vel.</div>
+        <div class="date span2">Feb 12, 2015</div>
+        <div class="contents span12">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+        <div class="toolbar span12"><button class="btn btn-primary reply-button">Reply</button></div>
+        <div class="Replys span12">
+            <div class="reply">
+                <div class="created pull-right">Feb 28, 2013</div>
+                <div class="content">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+            </div>
+            <div class="reply">
+                <div class="created pull-right">Feb 28, 2013</div>
+                <div class="content">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+            </div>
+            <div class="reply">
+                <div class="created pull-right">Feb 28, 2013</div>
+                <div class="content">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+            </div>
+        </div>
+    </div>
+    <div class="message row">
+        <div class="title span10">Consectetur adipiscing elit fusce vel.</div>
+        <div class="date span2">Feb 12, 2015</div>
+        <div class="contents span12">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+        <div class="toolbar span12"><button class="btn btn-primary reply-button">Reply</button></div>
+        <div class="Replys span12">
+            <div class="reply">
+                <div class="created pull-right">Feb 28, 2013</div>
+                <div class="content">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+            </div>
+        </div>
+    </div>
+    <div class="message row">
+        <div class="title span10">Consectetur adipiscing elit fusce vel.</div>
+        <div class="date span2">Feb 12, 2015</div>
+        <div class="contents span12">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+        <div class="toolbar span12"><button class="btn btn-primary reply-button">Reply</button></div>
+        <div class="Replys span12">
+            <div class="reply">
+                <div class="created pull-right">Feb 28, 2013</div>
+                <div class="content">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+            </div>
+            <div class="reply">
+                <div class="created pull-right">Feb 28, 2013</div>
+                <div class="content">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+            </div>
+           
+        </div>
+    </div>
+    <div class="message row">
+        <div class="title span10">Consectetur adipiscing elit fusce vel.</div>
+        <div class="date span2">Feb 12, 2015</div>
+        <div class="contents span12">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+        <div class="toolbar span12"><button class="btn btn-primary reply-button">Reply</button></div>
+        <div class="Replys span12">
+            <div class="reply">
+                <div class="created pull-right">Feb 28, 2013</div>
+                <div class="content">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+            </div>
+            <div class="reply">
+                <div class="created pull-right">Feb 28, 2013</div>
+                <div class="content">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+            </div>
+            <div class="reply">
+                <div class="created pull-right">Feb 28, 2013</div>
+                <div class="content">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@foreach (var topic in Model)
+{
+    <div>@topic.Title</div>
+    <div> -- @topic.Body</div>
+}
