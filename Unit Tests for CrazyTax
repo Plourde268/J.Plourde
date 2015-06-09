@@ -1,0 +1,60 @@
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace UnitTestProject1
+{
+    [TestClass]
+    public class CalculateTests
+    {
+        [TestMethod]
+        public void AgeLessThanFive()
+        {
+            //Arrange
+            Person peep = PersonMaker("billy", "bob", 4);
+            Tax tax = new Tax();
+            var amountToTax = 100;
+
+            //Act
+            decimal result = tax.Calculate(peep, amountToTax);
+            //Assert
+            Assert.AreEqual(0, result);
+        }
+
+        private static Person PersonMaker(string firstName, string lastName, int age)
+        {
+            Person peep = new Person()
+            {
+                FirstName = firstName,
+                LastName = lastName,
+                Age = age
+            };
+            return peep;
+        }
+        [TestMethod]
+        public void TestIfThursday()
+        {
+            DateTime nextThursday = DateTime.Now;
+            for (var i = 1; i < 8; i++)
+            {
+                if (nextThursday.DayOfWeek == DayOfWeek.Thursday)
+                    return;
+
+                nextThursday = nextThursday.AddDays(i);
+            }
+        }
+        [TestMethod]
+        public void FirstNameTest()
+        {
+            //Arrange
+            Person peep = PersonMaker("james", "rick", 4);
+            Tax tax = new Tax();
+            var amountToTax = 10.00m;
+
+            //Act
+            decimal result = tax.Calculate(peep, amountToTax);
+            //Assert
+            Assert.AreEqual(1.60m, result);
+        }
+    }
+}
+
